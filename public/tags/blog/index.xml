@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Josh Stepp</title>
+    <link>https://joshstepp.com/tags/blog/</link>
+    <description>Recent content in Blog on Josh Stepp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016-2019. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joshstepp.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pelican to GOpher: Migrating my Blog to the Hugo Framework</title>
+      <link>https://joshstepp.com/post/migratetohugo/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/migratetohugo/</guid>
+      <description>If you have been to this site recently, you will have noticed that it doesn’t look the same. I have migrated from Pelican, a static site generator written in Python to Hugo, a static site generator written in Go (golang).
+Why? My old blog just wasn&amp;rsquo;t cutting it. The Pelican project updated and when I tried to migrate my local project from one computer to another with different versions I broke the site, which in turn went nuclear on my github repo for the project.</description>
+    </item>
+    
+    <item>
+      <title>Goodbye WordPress Hello Pelican</title>
+      <link>https://joshstepp.com/post/goodbyewordpresshellopelican/</link>
+      <pubDate>Sat, 21 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/goodbyewordpresshellopelican/</guid>
+      <description>After one year of dedicated blogging, I have decided to ditch WordPress in favor of Pelican for my current blogging needs. This change has many benefits that are more in line with my current mindset for this project along with being easier to push content out.
+WordPress in general is great for an easy to use CMS. However as someone who enjoys python, Pelican was an easy transition. Additionally, due to Pelican being a static site, the server load required to run this blog is significantly lower, allowing it to be hosted on Github.</description>
+    </item>
+    
+  </channel>
+</rss>

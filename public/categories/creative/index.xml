@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creative on Josh Stepp</title>
+    <link>https://joshstepp.com/categories/creative/</link>
+    <description>Recent content in Creative on Josh Stepp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016-2019. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 02 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joshstepp.com/categories/creative/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ComboSex.py: A Simple Python Tool to Spark Creativity / Part 1</title>
+      <link>https://joshstepp.com/post/combosexpart1/</link>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/combosexpart1/</guid>
+      <description>ComboSex.py is a simple Python Tool that uses a scraped word list to combine random word combinations in an effort to spark creativity. The tool was inspired by a blog post from James Altucher called &amp;ldquo;How to Make Millions with Idea Sex&amp;rdquo;. The principle is simple, combine two seemingly non-related objects to get the new hotness.
+Dolls + Action = G.I. Joe
+Space + Buddhism = Star Wars
+Plus, millions of other examples you could come up with.</description>
+    </item>
+    
+  </channel>
+</rss>

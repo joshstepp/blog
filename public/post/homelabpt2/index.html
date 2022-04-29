@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home Lab Part II : My Setup</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Source Code Pro', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: green;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://joshstepp.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source%20Code%20Pro">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89104888-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-89104888-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Home Lab Part II : My Setup</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/now/">Now</a></li>
+                            
+                                <li><a href="/recommendedreading/">Books</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:joshstepp5@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/joshstepp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/j0sh_stepp/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/joshstepp404/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/homelabpt2/">Home Lab Part II : My Setup</a></h4>
+    <h5>A breakdown of my work horse and why it is built this way</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>My Homelab is a work horse for me; I use it to train smaller machine learning (tensorflow) models on, mess around with <a href="http://www.starcraftai.com/wiki/Main_Page/">Starcraft AI bots</a> on it, along with doing Information Security research and some light malware analysis/ reverse engineering. Essentially, it is a jack-of-all trades, master of none type of workstation.</p>
+
+<p><strong>Going in I had the following requirements:</strong></p>
+
+<ul>
+<li><p>CHEAP… I want this to be under $300USD (not counting the GPU)</p></li>
+
+<li><p>Able to support a GTX1070 GPU</p></li>
+
+<li><p>Able to make use of three drives and a CD/DVD Drive</p></li>
+
+<li><p>Support VirtualBox with 5 Virtual Machines going at one time</p></li>
+
+<li><p>Dual Boot Windows and Ubuntu</p></li>
+</ul>
+
+<p><em>Prerequisites - Items I Already Had</em></p>
+
+<p>I had a 500 GB SSD and a 500 GB HDD, so I only purchased one additional    250 GB SSD</p>
+
+<p>Peripherals - Keyboard / Mouse and Monitor</p>
+
+<h2 id="the-setup">The Setup</h2>
+
+<p><strong>Optiplex 3020 MT Core i5-4590 3.30Ghz - 135.00 + 21.00 USD Shipping (156.00 Total)</strong></p>
+
+<p>I LOVE older Optiplexi (?). You can get a lot of performance for next to nothing by re-purposing these machines after they leave their dreaded life in the corporate world. Seriously, I have gotten so many of these machines just off the curb or on their way to the garbage can. The Small form factor (SFF) models are great if you just need a system to do normal computer work on (browse the internet, e-mail, Microsoft Office work, light gaming) but the real value is in the mini-towers. Gamers have been snatching these up for years and throwing a low-power GPU in them and having a budget gaming system that can handle most modern games on lower settings. Furthermore, since they run some flavor of Core iX series chips, they support any virtualization needs you may have (enabled from BIOS) and for a pure home virtual lab server, I have even hosted ESXi off a USB drive on one of these.</p>
+
+<p>For my build, I went with the minitower as well because it can hold a Single GTX1070 and accepts an ATX sized PSU, albeit the cable management requires some creativity. Lastly, the case also met my needs for drive capacity. If I had more time to look, I would look for an i7 option on craigslist or local government auction before ebay. YMMV.</p>
+
+<p><strong>EVGA 220-B3-0750-V1 750W Bronze PSU - 96.00 USD Shipped</strong></p>
+
+<p>I needed this for the machine learning aspect of my homelab, for a normal Infosec/sysadmin lab this item can be skipped.</p>
+
+<p><strong>16 GB DDR3 1600 RAM / G.Skill RipJaws - 100.00 USD Shipped</strong></p>
+
+<p>Nothing really special here, I just bought 16GB of RAM that seemed affordable and didn’t look like it was made in someone&rsquo;s basement. I just needed enough to run my Virtual Machines.</p>
+
+<p><strong>My Active Directory Lab Setup</strong></p>
+
+<ul>
+<li><p>Windows Server 2016 : 30 GB // 3 GB RAM</p></li>
+
+<li><p>Windows 10 Pro : 20 GB // 2 GB RAM (x2)</p></li>
+
+<li><p>PFSense : 10 GB // 1 GB RAM</p></li>
+</ul>
+
+<p><strong>Other Systems that get switched on and off depending upon what I am doing</strong></p>
+
+<ul>
+<li>Kali : 35 GB // 4 GB RAM</li>
+<li>SIFT: 30 GB // 4 GB RAM</li>
+<li>Ubuntu Web Server (Hackazon):  15GB //1 GB RAM</li>
+<li>ElasticStack Ubuntu Box: 40GB // 4 GB RAM</li>
+<li>Security Onion (Elastic Install): 50 GB // 4 GB RAM</li>
+</ul>
+
+<h2 id="bare-bones-lab-box">Bare-Bones Lab Box</h2>
+
+<p>If I was doing this for pure information security research, I would get the best optiplex minitower I could afford, stuff it with 16GB of RAM, get a 500GB SSD and run Ubuntu on it with virtualbox hosting my lab environment. All this could be done for less $400USD and would take a while to out grow.  <em>Bonus points if the Optiplex has a Windows COA on it.</em></p>
+
+<h3 id="edit-jan-2018">EDIT: Jan 2018</h3>
+
+<p>Another option, although a little more expensive but more solutions to expand would be getting a Dell T7500 with as many CPUs and as much RAM as you can afford. These come with huge PSUs and if you want a Machine Learning Rig as well, they support large GPUs. Furthermore, for the lab, they can run on some versions of ESXi, so I am told.</p>
+
+<h3 id="edit-jan-2018-1">/EDIT: Jan 2018</h3>
+
+<p>LPT: Windows Server 2016 can be downloaded for free in an educational setting using the Microsoft Imagine portal as long as you are a student.  Otherwise, you can download trial versions as you see fit. I do this sometimes to see new builds and baseline them with my tools so I am not chasing a PE file I haven&rsquo;t seen before on newer systems.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>My setup is tailored to my needs and interests. I am fascinated by many subjects and just needed a workhorse system that wouldn’t break the bank. Remember this! It is a home lab, not a production environment, so give the virtual machines enough resources to function correctly, but don’t get get bent out of shape by using less than minimum specs. No end-users will be calling you about latency. Additionally, there is no need to go overboard right off the bat. Large rack mounted servers are cool, but they also eat a lot of power, make a ton of noise, and you need somewhere to put it. Grow into that! Lastly, this little setup has gotten me far, I mean I am no <a href="https://infosec.engineering/"> Jerry Bell </a> of course, but I am getting there!</p>
+
+<p>Hopefully, this helps you in deciding your setup and feel free to contact me via the links on the side or by opening a ticket.</p>
+
+<p>Part I:  <a href="https://joshstepp.com/post/homelabpt1/">Home Lab Approaches and Why</a></p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/2019reresources/">Reverse Engineering Resources for 2019</a></h4>
+    <h5>Some RE resources for beginners</h5>
+    
+    <a href="https://joshstepp.com/tags/reverse-engineering"><kbd class="item-tag">reverse engineering</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/training"><kbd class="item-tag">training</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/maliciousdoc_part1/">Malicious Document Crash Course Part 1: Microsoft Office Documents and Macros</a></h4>
+    <h5>A triaging method for dealing with Microsoft Documents with macros</h5>
+    
+    <a href="https://joshstepp.com/tags/training"><kbd class="item-tag">training</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/malicious-documents"><kbd class="item-tag">malicious documents</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/wgumscsia/">Western Governors University: Master of Science Cybersecurity and Information Assurance (MSCSIA) - My Review</a></h4>
+    <h5>My thoughts on the WGU MSCSIA program</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

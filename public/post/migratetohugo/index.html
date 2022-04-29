@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pelican to GOpher: Migrating my Blog to the Hugo Framework</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Source Code Pro', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: green;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://joshstepp.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source%20Code%20Pro">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89104888-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-89104888-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Pelican to GOpher: Migrating my Blog to the Hugo Framework</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/now/">Now</a></li>
+                            
+                                <li><a href="/recommendedreading/">Books</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:joshstepp5@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/joshstepp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/j0sh_stepp/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/joshstepp404/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/migratetohugo/">Pelican to GOpher: Migrating my Blog to the Hugo Framework</a></h4>
+    <h5>A static site generator written in Golang</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/blog"><kbd class="item-tag">blog</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>If you have been to this site recently, you will have noticed that it doesn’t look the same. I have migrated from Pelican, a static site generator written in Python to Hugo, a static site generator written in Go (golang).</p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/gopher_Golang.png"></p>
+
+<h2 id="why">Why?</h2>
+
+<p>My old blog just wasn&rsquo;t cutting it. The Pelican project updated and when I tried to migrate my local project from one computer to another with different versions I broke the site, which in turn went nuclear on my github repo for the project. I ended up fixing it, and getting the site back up, but this is just another example of my gripes with the python ecosystem.</p>
+
+<h2 id="python-ecosystem-gripes">Python Ecosystem Gripes</h2>
+
+<p>I love Python, it was the first language I got to know well and it is fun to program in&hellip;. <em>most of the time</em>. Even doing the best practices of always using virtualenv environments and minimizing what is stored locally, I still run into hassles with dependencies, especially those libraries used in data science or data analytics. Nowadays, I usually just build  my more complex python projects in Docker containers and use virtualenv for the smaller stuff. It has worked out well, but despite Docker&rsquo;s small footprint, I feel like this process is heavy&hellip;.heavier than it need to be.</p>
+
+<h2 id="back-to-why">Back to Why</h2>
+
+<p>So why Hugo? Well, first of all Go (which I will be calling from know on) is awesome. It is crazy fast, has a great standard library and is compiled. Furthermore, you can build executables to run on anything&hellip;. oh and did I mention, it is fast. Second, the workflow and documentation is great. I spent more time customizing the CSS and Javascript than I spent figuring out how to deploy my page.</p>
+
+<h2 id="so-how-easy-is-it-to-migrate-to-hugo">So How Easy is it to Migrate to Hugo?</h2>
+
+<p>If you can read the docs, you can deploy your blog. Seriously, that is all you need. If you can find another hosted blog on Github to see where certain directories and files go, it is even better. <a href="https://github.com/joshstepp/joshstepp.com">Here is mine!</a> ! All of these are covered in the docs, it is just easier to get it from a live site in my opinion. Lastly, the developers at Hugo give you a bash script that will deploy it when run once you add you commit message for git. Just make sure you follow the git sub-module process.</p>
+
+<h2 id="closing-up">Closing up</h2>
+
+<p>In closing, if you are looking for a static site generator that is hassle free, doesn&rsquo;t demand engagement and can easily be host on Github, seriously consider Hugo. There is a reason Go has been exploding in popularity in the last few years&hellip;. It&rsquo;s awesome and Hugo is no different.</p>
+
+<h2 id="resources-for-hugo">Resources for Hugo</h2>
+
+<p><a href="https://gohugo.io/documentation/">Hugo Docs</a></p>
+
+<p><a href="https://gohugo.io/">Hugo Main Site</a></p>
+
+<p><a href="https://themes.gohugo.io/">Themes</a></p>
+
+<p><a href="https://dave.cheney.net/resources-for-new-go-programmers">Go Resources</a></p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/wgumscsia/">Western Governors University: Master of Science Cybersecurity and Information Assurance (MSCSIA) - My Review</a></h4>
+    <h5>My thoughts on the WGU MSCSIA program</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/homelabpt2/">Home Lab Part II : My Setup</a></h4>
+    <h5>A breakdown of my work horse and why it is built this way</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/homelabpt1/">Home Lab Part I : Approaches and Why</a></h4>
+    <h5>Why You Need a Home Lab and How to Get Started</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

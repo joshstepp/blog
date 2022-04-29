@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Malicious Document Crash Course Part 1: Microsoft Office Documents and Macros</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Source Code Pro', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: green;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://joshstepp.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source%20Code%20Pro">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89104888-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-89104888-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Malicious Document Crash Course Part 1: Microsoft Office Documents and Macros</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/now/">Now</a></li>
+                            
+                                <li><a href="/recommendedreading/">Books</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:joshstepp5@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/joshstepp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/j0sh_stepp/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/joshstepp404/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/maliciousdoc_part1/">Malicious Document Crash Course Part 1: Microsoft Office Documents and Macros</a></h4>
+    <h5>A triaging method for dealing with Microsoft Documents with macros</h5>
+    
+    <a href="https://joshstepp.com/tags/training"><kbd class="item-tag">training</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/malicious-documents"><kbd class="item-tag">malicious documents</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Malicious Microsoft Office files were extremely intimidating to me when I first got into information security because it seemed to always be the vector in which someone got pwned. Couple that with a ransomware sample getting loose on my homelab and “securing” a plugged in flash drive (nervous double mouse tap), I was traumatized.</p>
+
+<p>However, as I became more familiar with them, I have discovered they are actually easy to identify and can be fun to tear apart. Plus I don’t have to battle any packers!</p>
+
+<p>So the point of this is to help you triage documents, not to do an in-depth analysis and focus on macros. Deeper, more technical posts will be in the future.</p>
+
+<h2 id="a-brief-introduction-to-microsoft-office-file-formats">A Brief Introduction to Microsoft Office File Formats</h2>
+
+<p>Despite the numerous extensions an office file can have, the biggest difference for our purposes is whether it has a three letter extension or a four letter extension (Spoiler Alert: it’s not a big deal with the tools we are using).</p>
+
+<p>Three letter extensions are an earlier binary format called Object Linking and Embedding (OLE) 2 and is often referred to as legacy, Structured Storage (SS) or Compound File Binary Format (CFBF).  The original goal of these formats were to reduce the performance hits of using flat files back when computers weren&rsquo;t as beefy as today. Microsoft maintains support for these file formats for backwards compatibility purposes and the best part is all OLE2 formats support macros, regardless of naming convention.</p>
+
+<p>In Office 2007, Microsoft introduced a new format called Open Office XML (OOXML) and is XML-based. These file formats have four letter extensions and are much easier to parse. Furthermore, only the documents with a “m” (.docm, pptm, dotm, etc. etc.) at the end will execute macros. The documents are basically a ZIP file and since the macro is stored in binary format within the document, you can usually unzip the document and target the .bin directly. More on that in a bit.</p>
+
+<p>If you would like to read more about file formats for Microsoft Office, this Microsoft <a href="https://docs.microsoft.com/en-us/deployoffice/compat/office-file-format-reference"> documentation </a>  has you covered</p>
+
+<h2 id="tools">Tools</h2>
+
+<p>Technically speaking, you can use a Microsoft OS with office installed to examine the samples for malicious macros. However, I consider that to be akin to cleaning a loaded weapon, there is just better ways to do things. My weapon of choice is the <a href="https://remnux.org/"> Remnux </a> virtual machine. It’s based on Ubuntu and is pre-loaded with all my favorite tools, plus it’s free. Just follow the docs and install it in your favorite virtual machine solution. Take a snapshot once you have it installed, that way you can revert before looking at a fresh sample.</p>
+
+<h2 id="analysis">Analysis</h2>
+
+<h3 id="caution-all-though-we-aren-t-executing-any-macros-or-opening-any-documents-in-a-windows-environment-i-am-not-responsible-for-any-damage-you-may-do-to-your-computer-this-is-for-educational-purposes-only">CAUTION: All though we aren’t executing any macros or opening any documents in a Windows environment, I am not responsible for any damage you may do to your computer. This is for educational purposes only.</h3>
+
+<p>Sample 1: 8b5c80771e73a21b71c1d6bce8fe32c1_MACRO_testing_INNOTEC.docm</p>
+
+<p><a href="https://cape.contextis.com/analysis/20715/">Download here </a></p>
+
+<p>This is a sample I got for this post and appears to be submitted as a test for macros. Sometimes you can get lucky with these.</p>
+
+<p>First, since its a .docm, that indicated it has macros, so lets unzip it to see what we are working with.</p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/unzip_docm.png"></p>
+
+<p>So we can already see it has a vbaProject.bin (which is common) file inside the document. The other files define the style and content for the Microsoft Office document. If there is an image, you can see that as well, which could indicate what the threat actor is using as a spear-phishing tactic. Once we have that .bin file we can start doing some static analysis on it like you would any other binary.</p>
+
+<p>You could run <code>strings</code> on it, (ensure you use the <code>--encoding=l</code> command as well to get the Unicode-encoded strings) to see visible strings. However, I personally like to use <a href="https://rada.re/r/">radare2</a> tools for this job.</p>
+
+<p>The command <code>rabin2 -zz</code> list all the strings from the raw binary.</p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/rabin2_docm1.png"></p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/rabin2_docm2.png"></p>
+
+<p>You can pipe that to a <code>more</code> or <code>less</code> if it makes it easier to read or even grep for keywords like <code>http</code> , <code>.exe</code> , or <code>Run</code>.</p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/rabin2_grep.png"></p>
+
+<p>But as you can probably see from just the strings analysis, there are some interesting things going on in this document. You could check out the www.vb-helper.com/vbhelper_425_64(.)gif, however that is risky and can infect your system or tip the attackers off. Also there is no guarantee that the site will render for you like it would for the victim. But just in case you were curious:</p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/vbhelper.png"></p>
+
+<p>Instead, let&rsquo;s get a look at the macros and to do that we will be using tools within Remnux called olevba.py and oledump.py.</p>
+
+<p><a href="https://www.decalage.info/python/olevba"> olevba.py </a> is a tool that parses OLE2 and OOXML documents for risky macro keywords and prints them out. In reality, olevba.py doesn’t need the vbaProject.bin to be extracted before being run on it, but since it is already there, we might as well use it.</p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/olevba_docm1.png"></p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/olevba_docm2.png"></p>
+
+<p>As you can see, it extracts all the macros stored and even prints a nifty table at the bottom.</p>
+
+<p>Depending on your organization and your role within the organization, at this point you could escalate this case up to be analyzed further, but it feels sacrilegious to not use a tool built by the malicious documents guru <a href="(https://blog.didierstevens.com/)"> Didider Stevens </a>.</p>
+
+<p><a href="(https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py)"> oledump.py </a> is one of many tools developed by Didier Stevens and is personally my go to tool for looking at Microsoft Office files. So first point oledump.py at our document or the vbaProject.bin:</p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/oledump_docm.png"></p>
+
+<p>The output is in the form of streams and will indicate what stream a macro is in by using a “M”. In our sample, stream 3 has the macro, so lets decompress it using the <code>-v</code> switch and the <code>-s</code> to indicate the stream we are targeting.</p>
+
+<p><img class="pure-img" img style= "display:block; margin-left: auto; margin-right: auto;" src="/img/post/maldoc_pt1/oledump_docm2.png"></p>
+
+<p>As we can gather from this output, the macro essentially opens the calc.exe on the system and maintains persistence by a <code>/Run</code> registry key.  Certainly not the most exciting sample ever but it is good representation of what malware does.</p>
+
+<p>Hopefully you feel more comfortable with Microsoft Office documents and in my next edition I will dig into a more sophisticated sample from an APT group and introduce more complex items to analyze.</p>
+
+<p>Happy Hunting</p>
+
+<p>Josh Stepp</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/2019reresources/">Reverse Engineering Resources for 2019</a></h4>
+    <h5>Some RE resources for beginners</h5>
+    
+    <a href="https://joshstepp.com/tags/reverse-engineering"><kbd class="item-tag">reverse engineering</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/training"><kbd class="item-tag">training</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/wgumscsia/">Western Governors University: Master of Science Cybersecurity and Information Assurance (MSCSIA) - My Review</a></h4>
+    <h5>My thoughts on the WGU MSCSIA program</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/homelabpt2/">Home Lab Part II : My Setup</a></h4>
+    <h5>A breakdown of my work horse and why it is built this way</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

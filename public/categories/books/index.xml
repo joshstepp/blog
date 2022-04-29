@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Josh Stepp</title>
+    <link>https://joshstepp.com/categories/books/</link>
+    <description>Recent content in Books on Josh Stepp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016-2019. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 29 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joshstepp.com/categories/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Home Lab Part I : Approaches and Why</title>
+      <link>https://joshstepp.com/post/homelabpt1/</link>
+      <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/homelabpt1/</guid>
+      <description>This will be a multiple part post outlining my opinions of homelabs and what you should consider when building your lab. I will also include a few resources I can vouch for and have used. Furthermore, I do not claim to have all the answers and your setup/needs will be different from mine. That being said, I will start off in a general sense and narrow done as these posts go on.</description>
+    </item>
+    
+    <item>
+      <title>Do The Hard Stuff</title>
+      <link>https://joshstepp.com/post/dothehardstuff/</link>
+      <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/dothehardstuff/</guid>
+      <description>After reading Deep Work last week by Cal Newport, I decided it would be a good time to revisit So Good They Can’t Ignore You, his previous book. After completing that book I saw Ryan Holiday’s The Obstacle Is the Way on the shelf and decided to revisit that one as well because I could get something new from it at this stage in my life, compared to when I read it two years ago for the first time.</description>
+    </item>
+    
+  </channel>
+</rss>

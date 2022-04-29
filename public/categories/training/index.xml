@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Training on Josh Stepp</title>
+    <link>https://joshstepp.com/categories/training/</link>
+    <description>Recent content in Training on Josh Stepp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016-2019. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joshstepp.com/categories/training/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reverse Engineering Resources for 2019</title>
+      <link>https://joshstepp.com/post/2019reresources/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/2019reresources/</guid>
+      <description>As the New Year has arrived, I wanted to take this time, not to outline my resolutions or goals, but to write the post I wish I had when I got into reverse engineering/ malware analysis. Beware, there are numerous more resources than what is listed here, these are just resources I like and recommend.
+Books Practical Malware Analysis by Andrew Honig and Michael Sikorski
+This was my first book on the subject and is a great primer to understanding malware characteristics.</description>
+    </item>
+    
+    <item>
+      <title>Malicious Document Crash Course Part 1: Microsoft Office Documents and Macros</title>
+      <link>https://joshstepp.com/post/maliciousdoc_part1/</link>
+      <pubDate>Sun, 30 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/maliciousdoc_part1/</guid>
+      <description>Malicious Microsoft Office files were extremely intimidating to me when I first got into information security because it seemed to always be the vector in which someone got pwned. Couple that with a ransomware sample getting loose on my homelab and “securing” a plugged in flash drive (nervous double mouse tap), I was traumatized.
+However, as I became more familiar with them, I have discovered they are actually easy to identify and can be fun to tear apart.</description>
+    </item>
+    
+  </channel>
+</rss>

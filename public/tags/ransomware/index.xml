@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ransomware on Josh Stepp</title>
+    <link>https://joshstepp.com/tags/ransomware/</link>
+    <description>Recent content in Ransomware on Josh Stepp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016-2019. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 21 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joshstepp.com/tags/ransomware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ransomware: The New Massively Disruptive Market?</title>
+      <link>https://joshstepp.com/post/ransomware-new-market/</link>
+      <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/ransomware-new-market/</guid>
+      <description>Ransomware, malicious software designed to encrypt a victim’s hard drive and charge a ransom for the recovered files, has been reigning terror or organizations and users for a number of years now. The business model has always been simple, infect the user through spam e-mail or other vectors of infection (i.e. online droppers), encrypt the hard drive and hold it hostage until the user pays the ransom in Bitcoin. Rinse and repeat.</description>
+    </item>
+    
+  </channel>
+</rss>

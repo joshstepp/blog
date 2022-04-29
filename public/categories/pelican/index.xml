@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pelican on Josh Stepp</title>
+    <link>https://joshstepp.com/categories/pelican/</link>
+    <description>Recent content in Pelican on Josh Stepp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016-2019. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 21 May 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joshstepp.com/categories/pelican/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Goodbye WordPress Hello Pelican</title>
+      <link>https://joshstepp.com/post/goodbyewordpresshellopelican/</link>
+      <pubDate>Sat, 21 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/goodbyewordpresshellopelican/</guid>
+      <description>After one year of dedicated blogging, I have decided to ditch WordPress in favor of Pelican for my current blogging needs. This change has many benefits that are more in line with my current mindset for this project along with being easier to push content out.
+WordPress in general is great for an easy to use CMS. However as someone who enjoys python, Pelican was an easy transition. Additionally, due to Pelican being a static site, the server load required to run this blog is significantly lower, allowing it to be hosted on Github.</description>
+    </item>
+    
+  </channel>
+</rss>

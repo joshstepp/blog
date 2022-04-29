@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Reverse Engineering Resources for 2019</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Source Code Pro', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: green;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://joshstepp.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source%20Code%20Pro">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89104888-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-89104888-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Reverse Engineering Resources for 2019</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/now/">Now</a></li>
+                            
+                                <li><a href="/recommendedreading/">Books</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:joshstepp5@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/joshstepp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/j0sh_stepp/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/joshstepp404/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/2019reresources/">Reverse Engineering Resources for 2019</a></h4>
+    <h5>Some RE resources for beginners</h5>
+    
+    <a href="https://joshstepp.com/tags/reverse-engineering"><kbd class="item-tag">reverse engineering</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/training"><kbd class="item-tag">training</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>As the New Year has arrived, I wanted to take this time, not to outline my resolutions or goals, but to write the post I wish I had when I got into reverse engineering/ malware analysis. Beware, there are numerous more resources than what is listed here, these are just resources I like and recommend.</p>
+
+<h2 id="books">Books</h2>
+
+<p><a href="https://amzn.to/2GS5FXM">Practical Malware Analysis</a> by Andrew Honig and Michael Sikorski</p>
+
+<p>This was my first book on the subject and is a great primer to understanding malware characteristics.</p>
+
+<p><a href="https://amzn.to/2StqoCA">Practical Reverse Engineering: X86, X64, Arm, Windows Kernel, Reversing Tools, and Obfuscation</a> by Bruce Dang</p>
+
+<p>More of a reference book and I have learned alot from this book, but it can be difficult to read.</p>
+
+<p><a href="https://amzn.to/2s64zgL">Reversing: Secrets of Reverse Engineering</a> by Eldad Eilam</p>
+
+<p>This book was enjoyable to read and really covers the basics well.</p>
+
+<p><a href="https://beginners.re/">Reverse Engineering for Beginners</a> by Dennis Yurichev</p>
+
+<p>It&rsquo;s free and packed full of knowledge.</p>
+
+<h2 id="tutorials">Tutorials</h2>
+
+<p><a href="https://sites.google.com/secured.org/malwareunicorn/reverse-engineering/re101">Malware Unicorn&rsquo;s RE101 </a>  course is amazing and introduces you to the tools of the trade quickly. Her entire website is a wealth of information and look up her talks on youtube as well!</p>
+
+<p><a href="https://securedorg.github.io/RE102/">Malware Unicorn&rsquo;s RE102 </a> is just as good as the first and really ramps up into some interesting malware tactics.</p>
+
+<p><a href="http://opensecuritytraining.info/">OpenSecurityTraining.info </a>
+ is like the Khan Academy of Computer Science/ Security.</p>
+
+<p><a href="https://tuts4you.com/e107_plugins/download/download.php?action=list&id=17"> Lenas Reversing for Newbies </a>  is a great introduction to RE.</p>
+
+<p><a href="http://flare-on.com/"> Flare-On by Fireeye</a> is a CTF they host every year and has write-ups to every solution along with the binary. Plus they provide the flare-vm as well. Amazing training!</p>
+
+<p><a href="https://azeria-labs.com/writing-arm-assembly-part-1/"> Azeria Arm Labs</a> are ARM based RE exercises. ARM is a totally new beast to me and I haven&rsquo;t went through all of these, but it is great from what I have seen.</p>
+
+<h2 id="virtual-machines">Virtual Machines</h2>
+
+<p><a href="https://github.com/fireeye/flare-vm"> Flare-vm</a> requires a Windows VM to install on top of but this suite will give you every tool you could need to work with Windows-based malware.</p>
+
+<p><a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/"> Windows Trial VMs</a> are here. Pick your VM software and snapshot it after import, but before powering on. Then Snapshot it again once all the tools are on. Go to the original when your trial is over and can not be renewed.</p>
+
+<p><a href="https://oalabs.openanalysis.net/2018/07/16/oalabs_malware_analysis_virtual_machine/"> OA Labs VM</a> is similar to Flare but has less tools and is built for their youtube tutorials. They recommended a Win7 32 bit I believe.</p>
+
+<p><a href="https://remnux.org/"> Remnux </a> is an Ubuntu-based toolkit for reverse-engineering. Almost all the tools are command-line based and can handle most jobs. Additionally, the documentation is great and provides starting points for what tools to use and when. And it&rsquo;s free!</p>
+
+<h2 id="samples">Samples</h2>
+
+<p><a href="https://cape.contextis.com/analysis/search/"> CAPE Sandbox</a> is a open sandbox that allows you to download what is submitted.</p>
+
+<p><a href="https://github.com/ytisf/theZoo"> The Zoo</a> is a github repo of some popular malware and good stuff to get your feet wet with. Most of the PEs here have write-ups, so you can check your work.</p>
+
+<p><a href="https://malpedia.caad.fkie.fraunhofer.de/"> Malpedia</a> houses samples, report links, and yara rules for a ton of malware. My favorite, but you do need to be vetted before joining this site.</p>
+
+<p><a href="iec56w4ibovnb4wc.onion"> 0xffff0800 Library</a> is a TOR hosted site (you can just add .to to the end of the URL) with a ton of great samples, mostly from APTs. True hero for hosting this!</p>
+
+<h2 id="youtube-channels">Youtube Channels</h2>
+
+<p><a href="https://www.youtube.com/channel/UC--DwaiMV-jtO-6EvmKOnqg"> OA-Labs</a> has great tutorials and knowledge packed videos. Speaking about packers, if you are dealing with one, these guys probably have a video on how to get around it.</p>
+
+<p><a href="https://www.youtube.com/channel/UCVFXrUwuWxNlm6UNZtBLJ-A"> Malware Analysis For Hedgehogs</a>  is a another great resource, especially the PE videos.</p>
+
+<p><a href="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w"> Live Overflow</a> does a great job explaining concepts and showing how to apply those concepts to reversing.</p>
+
+<p>Happy Reversing!</p>
+
+<p>Josh Stepp</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/maliciousdoc_part1/">Malicious Document Crash Course Part 1: Microsoft Office Documents and Macros</a></h4>
+    <h5>A triaging method for dealing with Microsoft Documents with macros</h5>
+    
+    <a href="https://joshstepp.com/tags/training"><kbd class="item-tag">training</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/malicious-documents"><kbd class="item-tag">malicious documents</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/wgumscsia/">Western Governors University: Master of Science Cybersecurity and Information Assurance (MSCSIA) - My Review</a></h4>
+    <h5>My thoughts on the WGU MSCSIA program</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/homelabpt2/">Home Lab Part II : My Setup</a></h4>
+    <h5>A breakdown of my work horse and why it is built this way</h5>
+    
+    <a href="https://joshstepp.com/tags/thoughts"><kbd class="item-tag">thoughts</kbd></a>
+    
+    <a href="https://joshstepp.com/tags/infosec"><kbd class="item-tag">infosec</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

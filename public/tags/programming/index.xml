@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Josh Stepp</title>
+    <link>https://joshstepp.com/tags/programming/</link>
+    <description>Recent content in Programming on Josh Stepp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016-2019. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 29 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joshstepp.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>This Isn&#39;t a Lifestyle Blog but These are Awesome</title>
+      <link>https://joshstepp.com/post/notalifestyleblog/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://joshstepp.com/post/notalifestyleblog/</guid>
+      <description>Many of my bigger projects have been placed on the back-burner as I have been focusing more on work, classes and spending time with my family. Although, I am not grokking down into the weeds on new technologies, I have stumbled across some nuggets worth sharing, even at the risk of sounding like a “lifestyle” blog.
+Infosec Think-Piece
+This essay has been making it&amp;rsquo;s rounds on infosec twitter however, I think it is worth reading to all those who are in infosec or are even curious about infosec/”cyber security”.</description>
+    </item>
+    
+  </channel>
+</rss>
