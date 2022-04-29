@@ -10,15 +10,20 @@ description = "What are you doing now?"
 
 #### In no particular order I am currently working on the following:
 
-Dabbling in Reverse Engineering and blogging more about it on here. 
+Working at Elastic 
+
+Taking SANS SEC588  <a href="https://www.sans.org/cyber-security-courses/cloud-penetration-testing/">Cloud Penetration Testing</a> 
+
+
+Learning Java more in my free time:  <a href="https://java-programming.mooc.fi/">Java MOOC</a> Getting back into building more things!
+
+<a href="https://drawabox.com/">Draw a Box</a>
+
+Reading <a href="https://amzn.to/3vT5e5D"> Inspired: How to Create Tech Products Customers Love</a> by Marty Cagan
 
 Spending time with my mini-me's. My girls are getting older and I love teaching them new things. I spend quite a bit of my "free time" fostering their curiosity for the world. 
 
-Reading <a href="https://amzn.to/2LuL9ec">Can't Hurt Me: Master Your Mind and Defy the Odds </a> by David Goggins. The baddest man on the planet.
-
-Exploring ways to be more creative: writing, drawing, and writing a self-published book....kinda (no clue on release and doing it in my spare-spare time)
-
 Enjoying life
 
-Current as of January 2019
+Current as of May 2022
 

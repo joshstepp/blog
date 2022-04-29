@@ -35,3 +35,11 @@ Like most books from Dale Carnegie, amazing content, awful title. The “influen
 <a href="http://amzn.to/2eYCOxG">So Good the Can’t Ignore You: Why Skills Trump Passion in the Quest for Work You Love</a> by Cal Newport
 
 Anything by Cal Newport is worth a read in my opinion. This guy is a machine cranking out peer- reviewed research papers while putting out quality books and blog posts weekly. I particular like this book because it goes against the idea of “following your passion” and instead suggest you should get really good at an in-demand skill then leverage your ability for favorable work conditions. Instead of chronic job hopping, adopt a craftsmen mentality and get really good at something that pays well. Use your spare time for hobbies.
+
+
+<a href="https://www.amazon.com/Cant-Hurt-Me-David-Goggins-audiobook/dp/B07KKP62FW/ref=as_li_ss_il?dchild=1&keywords=You+Cant+hurt+me&qid=1597582053&sr=8-1&linkCode=li1&tag=30somethingac-20&linkId=c2ff1f5d2b4f256c19b83b96cc0e424f&language=en_US" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07KKP62FW&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=30somethingac-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=30somethingac-20&language=en_US&l=li1&o=1&a=B07KKP62FW" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+
+<a href="https://amzn.to/2DPQRs1">Can't Hurt Me: Master Your Mind and Defy the Odds</a> by David Goggins
+
+I don't know why Navy Seals seem to write the best books, but this one is a gem. The audiobook version has extra content makes the book that much better. Essentially, this book outlines how David Goggins (google him) got to be the man he is today despite growing up in a terrible environment and getting dealt some crap cards in life. The reason it made my list is that it doesn't have some secret message or get rich quick gimmick, but instead focuses on finding your issues, correcting them and getting after it every day. 
